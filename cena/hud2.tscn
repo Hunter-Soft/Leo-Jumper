@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd3001xrgtvku"]
+
+[ext_resource type="Texture2D" uid="uid://c6s2cmo6slabv" path="res://assets/progressbar.png" id="1_l6b3x"]
+[ext_resource type="Texture2D" uid="uid://1jsrotg8100" path="res://assets/leobar.png" id="2_epjm2"]
+
+[node name="Hud3" type="CanvasLayer"]
+
+[node name="progress" type="TextureRect" parent="."]
+offset_left = 330.0
+offset_top = 673.0
+offset_right = 980.0
+offset_bottom = 725.0
+texture = ExtResource("1_l6b3x")
+expand_mode = 1
+
+[node name="icon" type="TextureRect" parent="."]
+offset_left = 332.0
+offset_top = 668.0
+offset_right = 402.0
+offset_bottom = 710.0
+texture = ExtResource("2_epjm2")

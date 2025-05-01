@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy7amg84bacve"]
+
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_7gfwy"]
+[ext_resource type="Texture2D" uid="uid://dmcdxs4uk2tlc" path="res://assets/button 2.2.png" id="2_7gfwy"]
+[ext_resource type="Texture2D" uid="uid://bqcvimkl1os3p" path="res://assets/button UI2.png" id="3_iyenp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dq418"]
+texture = ExtResource("2_7gfwy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1fva"]
+texture = ExtResource("2_7gfwy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rg0mq"]
+texture = ExtResource("3_iyenp")
+
+[node name="passou" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = -163.0
+offset_right = 307.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_7gfwy")
+theme_override_font_sizes/font_size = 70
+text = "VOCÊ PASSOU !"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 574.0
+offset_top = 378.0
+offset_right = 591.0
+offset_bottom = 395.0
+scale = Vector2(6.90441, 6.90441)
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dq418")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x1fva")
+theme_override_styles/normal = SubResource("StyleBoxTexture_rg0mq")

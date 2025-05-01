@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://dx7ljyobgvtih"]
+
+[ext_resource type="Texture2D" uid="uid://beev8mu45kaoi" path="res://assets/leo/leo-victory.png" id="1_5gsgv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6cn8"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(0, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2opj8"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(70, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l37c3"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(140, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vqvq"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(210, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqg81"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(280, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fq7v"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(350, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r28h7"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(420, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6lwy"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(490, 0, 70, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bha13"]
+atlas = ExtResource("1_5gsgv")
+region = Rect2(560, 0, 70, 74)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2boac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6cn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2opj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l37c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vqvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqg81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fq7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r28h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6lwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bha13")
+}],
+"loop": true,
+"name": &"victory",
+"speed": 10.0
+}]
+
+[node name="leovictory" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2boac")
+animation = &"victory"

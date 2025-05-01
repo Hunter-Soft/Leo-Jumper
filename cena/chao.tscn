@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://n5v8vg2xwux6"]
+
+[ext_resource type="Texture2D" uid="uid://c1oqrqxusukd2" path="res://assets/img/background/ground.png" id="1_6evm5"]
+[ext_resource type="Script" uid="uid://cw1b1f5shcwi8" path="res://cena/chao.gd" id="1_cf7o8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf7o8"]
+size = Vector2(2531, 65)
+
+[node name="chao" type="StaticBody2D"]
+script = ExtResource("1_cf7o8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 653)
+scale = Vector2(1.09852, 0.697917)
+texture = ExtResource("1_6evm5")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2531, 67)
+rotation = 3.14159
+scale = Vector2(1.09852, 0.697917)
+texture = ExtResource("1_6evm5")
+centered = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1265.5, 32.5)
+shape = SubResource("RectangleShape2D_cf7o8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1265, 688)
+shape = SubResource("RectangleShape2D_cf7o8")

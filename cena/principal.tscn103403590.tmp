@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://1f0kyfdtmlu3"]
+
+[ext_resource type="PackedScene" uid="uid://10xmrhvfdghd" path="res://cena/fundo.tscn" id="1_2gx7y"]
+[ext_resource type="Script" uid="uid://dw4ciyowwc2ha" path="res://cena/principal.gd" id="1_l68wl"]
+[ext_resource type="PackedScene" uid="uid://n5v8vg2xwux6" path="res://cena/chao.tscn" id="2_l68wl"]
+[ext_resource type="PackedScene" uid="uid://2vbxc2qaf7ts" path="res://cena/leo.tscn" id="3_q7jhs"]
+[ext_resource type="PackedScene" uid="uid://cufqbb5rtbwas" path="res://cena/hud.tscn" id="5_q7jhs"]
+
+[node name="Principal" type="Node"]
+script = ExtResource("1_l68wl")
+
+[node name="fundo" parent="." instance=ExtResource("1_2gx7y")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(639, 362)
+
+[node name="leo" parent="." instance=ExtResource("3_q7jhs")]
+position = Vector2(-20, 232)
+
+[node name="chao" parent="." instance=ExtResource("2_l68wl")]
+
+[node name="HUD" parent="." instance=ExtResource("5_q7jhs")]
+
+[node name="chao2" parent="." instance=ExtResource("2_l68wl")]
+position = Vector2(2530, 719)
+rotation = 3.14159

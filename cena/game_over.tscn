@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=3 uid="uid://bcb6vt42dkha5"]
+
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_4ggk7"]
+[ext_resource type="Texture2D" uid="uid://c37ditv0dwjel" path="res://assets/button UI.png" id="2_q5ms5"]
+[ext_resource type="Texture2D" uid="uid://bqcvimkl1os3p" path="res://assets/button UI2.png" id="3_ak4a5"]
+[ext_resource type="Texture2D" uid="uid://b2btvbg1xh3ty" path="res://assets/button 2.1.png" id="4_h53hc"]
+[ext_resource type="Texture2D" uid="uid://dmcdxs4uk2tlc" path="res://assets/button 2.2.png" id="4_q5ms5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8nges"]
+texture = ExtResource("4_h53hc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yy8dk"]
+texture = ExtResource("4_h53hc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icx4f"]
+texture = ExtResource("2_q5ms5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ak4a5"]
+texture = ExtResource("4_q5ms5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h53hc"]
+texture = ExtResource("4_q5ms5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwmq7"]
+texture = ExtResource("3_ak4a5")
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 374.0
+offset_right = 539.0
+offset_bottom = 490.0
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_8nges")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yy8dk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_icx4f")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -163.0
+offset_right = 295.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_4ggk7")
+theme_override_font_sizes/font_size = 70
+text = "Você morreu"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 761.0
+offset_top = 375.0
+offset_right = 778.0
+offset_bottom = 392.0
+scale = Vector2(6.90441, 6.90441)
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ak4a5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h53hc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hwmq7")

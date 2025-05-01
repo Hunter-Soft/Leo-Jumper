@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfht8o7k0qh4l"]
+
+[ext_resource type="Texture2D" uid="uid://dmoqc6ex5ncho" path="res://assets/leo/leo-map.png" id="1_f5kvo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5kvo"]
+atlas = ExtResource("1_f5kvo")
+region = Rect2(0, 0, 85, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esnii"]
+atlas = ExtResource("1_f5kvo")
+region = Rect2(85, 0, 85, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfd11"]
+atlas = ExtResource("1_f5kvo")
+region = Rect2(170, 0, 85, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmimf"]
+atlas = ExtResource("1_f5kvo")
+region = Rect2(255, 0, 85, 74)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eykun"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5kvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esnii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfd11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmimf")
+}],
+"loop": true,
+"name": &"map",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f5kvo"]
+radius = 33.6155
+
+[node name="leomap" type="CharacterBody2D"]
+
+[node name="leomap" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -3)
+sprite_frames = SubResource("SpriteFrames_eykun")
+animation = &"map"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -4)
+shape = SubResource("CircleShape2D_f5kvo")

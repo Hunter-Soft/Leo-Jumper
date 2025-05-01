@@ -1,0 +1,57 @@
+[gd_scene load_steps=13 format=3 uid="uid://1f0kyfdtmlu3"]
+
+[ext_resource type="PackedScene" uid="uid://10xmrhvfdghd" path="res://cena/fundo.tscn" id="1_2gx7y"]
+[ext_resource type="Script" uid="uid://dw4ciyowwc2ha" path="res://cena/principal.gd" id="1_l68wl"]
+[ext_resource type="PackedScene" uid="uid://n5v8vg2xwux6" path="res://cena/chao.tscn" id="2_l68wl"]
+[ext_resource type="PackedScene" uid="uid://2vbxc2qaf7ts" path="res://cena/leo.tscn" id="3_q7jhs"]
+[ext_resource type="PackedScene" uid="uid://cy7amg84bacve" path="res://cena/passou.tscn" id="4_1g411"]
+[ext_resource type="PackedScene" uid="uid://cufqbb5rtbwas" path="res://cena/hud.tscn" id="5_q7jhs"]
+[ext_resource type="PackedScene" uid="uid://bcb6vt42dkha5" path="res://cena/game_over.tscn" id="6_3nwk1"]
+[ext_resource type="PackedScene" uid="uid://cd3001xrgtvku" path="res://cena/hud2.tscn" id="6_x3c27"]
+[ext_resource type="AudioStream" uid="uid://i8vskubucnpu" path="res://assets/sound/Musica_fase.wav" id="9_q8lmf"]
+[ext_resource type="AudioStream" uid="uid://5h02mgqugtq7" path="res://assets/sound/victory.wav" id="10_fisk3"]
+[ext_resource type="PackedScene" uid="uid://dx7ljyobgvtih" path="res://cena/leovictory.tscn" id="11_fat4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nwk1"]
+size = Vector2(731, 20)
+
+[node name="Principal" type="Node"]
+script = ExtResource("1_l68wl")
+
+[node name="fundo" parent="." instance=ExtResource("1_2gx7y")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(639, 362)
+
+[node name="leo" parent="." instance=ExtResource("3_q7jhs")]
+position = Vector2(-20, 232)
+
+[node name="leovictory" parent="." instance=ExtResource("11_fat4m")]
+position = Vector2(-130, 604)
+scale = Vector2(1.67143, 1.67143)
+
+[node name="chao" parent="." groups=["leo"] instance=ExtResource("2_l68wl")]
+
+[node name="HUD" parent="." instance=ExtResource("5_q7jhs")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_3nwk1")]
+process_mode = 2
+
+[node name="passou" parent="." instance=ExtResource("4_1g411")]
+process_mode = 2
+
+[node name="Hud" parent="." instance=ExtResource("6_x3c27")]
+
+[node name="ParedeEsquerda" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda"]
+position = Vector2(2.00001, 354.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_3nwk1")
+
+[node name="MusicaFase" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_q8lmf")
+autoplay = true
+
+[node name="victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_fisk3")
